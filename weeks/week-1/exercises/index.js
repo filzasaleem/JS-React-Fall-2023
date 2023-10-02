@@ -8,6 +8,9 @@ const cafe = "Exercise Cafe";
 console.log(`Welcome to ${cafe}! What would you like to order today?`);
 
 
+const cafeName = "Technigo Cafe";
+console.log(`Welcome to ${cafeName}! What would you like to order today?`);
+
 /*
 2)
 Create a variable that stores the price of a coffee.
