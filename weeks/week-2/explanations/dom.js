@@ -19,7 +19,14 @@ Each element, attribute, and text node in an HTML document is represented as a n
 JavaScript allows you to interact with and manipulate these nodes to dynamically change the content and structure of a web page.
  */
 
+
 console.log("LOGGING THE DOCUMENT");
+// const changeList = document.getElementById("dom-manipulation");
+// changeList.innerText = "hello there";
+
+
+const headings =  document.getElementById("headings");
+headings.insertBefore.apply = "changed headings";
 
 /* The WOM refers to the global object provided by a web browser environment, 
 often referred to as the window object. The window object represents the browser window or the global context in which 
