@@ -22,10 +22,24 @@ const pokemons = [
 // the pokemons from the pokemons array
 // invoke the function to see that it works
 
+pokemons.forEach((pokemon)=>[
+  console.log(pokemon)
+]);
+
 // 2)
 // Create an object for the pokemon Pikachu.
 // it could have properties such as name, element,
 // strength, color, amountOfLegs or something like that.
+
+pokemon = {
+  name :'Pikachu',
+  element: 'electricity pokemon',
+  strength : '32',
+  color : 'yellow',
+  numberOfLegs : '2',
+
+}
+console.log(`${pokemon.name} is a ${pokemon.element} with the strength of ${pokemon.strength}`);
 
 // 3)
 // console.log something like
@@ -34,12 +48,16 @@ const pokemons = [
 
 // 4)
 // Add the property stillToCatch: true to the Pikachu object.
-
+pokemon.stillToCatch = true;
+pokemon.strength = '43';
+console.log(pokemon);
 // 5)
 // change the value of the key strength in the Pikachu object.
 
 // 6)
 // Delete a property from the Pikachu object.
+delete pokemon.numberOfLegs;
+console.log(pokemon);
 
 // 7)
 // Fill up this array with a few more pokemons.
@@ -57,8 +75,17 @@ const moreAboutPokemons = [
     element: "fire",
     strength: 32,
   },
+  {
+    name : "pikachu",
+    element: "electricity",
+    strength: 25,
+  }
 ];
 
+moreAboutPokemons.forEach((pokemon)=> {
+
+  console.log("NAME: "+ pokemon.name);
+});
 // 8)
 // Print out all the NAMES of the pokemons in this new array.
 
