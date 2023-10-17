@@ -5,6 +5,8 @@
 /* 1. Define params
 Define the word and API_KEY as path and query parameters for the API.
 Make sure to replace the values with your actual word and API key. */
+const apiKey = "57d54fc2-f42e-4b9f-bfd0-61d2344594e1";
+
 
 /* 2. Construct the API URL:
 Construct the URL using the word and API_KEY parameters:
