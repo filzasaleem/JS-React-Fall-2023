@@ -1,47 +1,63 @@
-import "./Card.css";
+import { useState } from "react";
+import "./Card.scss";
 
-const Card = ({ Title, SubTitle, Icon, ButtonText }) => {
+// Passing in and destructuring the props
+const Card = ({
+  buttonColor,
+  buttonText,
+  buttonTextColor,
+  emoji,
+  primary,
+  secondary,
+  subtitle,
+  subtitleColor,
+  title,
+  titleColor,
+}) => {
+  // this state variable takes care of what "version" of the card to render
+  const [clicked, setClicked] = useState(false);
+
   // If the card is clicked, render this:
-  // return ();
+  if (clicked)
+    return (
+      <article className="card clickedCard">
+        <section className="top" style={{ background: primary }}>
+          <h1 className="title" style={{ color: titleColor }}>
+            {title}
+          </h1>
+        </section>
+        <section className="bottom" style={{ background: secondary }}>
+          <span className="emoji" role="img" aria-label="emoji">
+            {emoji}
+          </span>
+        </section>
+      </article>
+    );
 
-    
-  const colorTheme = {
-    lemon: {
-      title: "#166F39",
-      primary: "#8CFFBA",
-      secondary: "#CFFFE2",
-      subtitle: "#000000",
-      buttonColor: "#FCED84",
-      buttonTextColor: "#000000",
-    },
-    rocket: {
-      title: "#0B0C11",
-      primary: "#A6CFE2",
-      secondary: "#C2DCE9",
-      subtitle: "#0B0C11",
-      buttonColor: "#0B0C11",
-      buttonTextColor: "#FFD600",
-    },
-    doggy: {
-      title: "#502F7E",
-      primary: "#EEB200",
-      secondary: "#FFE086",
-      subtitle: "#502F7E",
-      buttonColor: "#FFFFFF",
-      buttonTextColor: "#502F7E",
-    }
-  };
-  // If the card isn't clicked, render this:
-  return <div className="CardContainer">
-    <div className="Title">
-      <h1 className="TitleColor">{Title}</h1>  
-      <p>{Icon}</p>
-    </div>
-    <div className="SubContent">
-      <h2 className="SubTitleColor">{SubTitle}</h2>
-      <button className="ButtonColor">{ButtonText}</button>
-    </div>
-    </div>;
+  // If the card isn't cliked, render this:
+  return (
+    <article className="card">
+      <section className="top" style={{ background: primary }}>
+        <h1 className="title" style={{ color: titleColor }}>
+          {title}
+        </h1>
+        <span className="emoji" role="img" aria-label="emoji">
+          {emoji}
+        </span>
+      </section>
+      <section className="bottom" style={{ background: secondary }}>
+        <h2 className="subTitle" style={{ color: subtitleColor }}>
+          {subtitle}
+        </h2>
+        <button
+          style={{ background: buttonColor, color: buttonTextColor }}
+          onClick={() => setClicked(!clicked)}
+        >
+          {buttonText}
+        </button>
+      </section>
+    </article>
+  );
 };
 
 export default Card;
