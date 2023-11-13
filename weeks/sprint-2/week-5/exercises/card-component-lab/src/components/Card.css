@@ -1,3 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Roboto:wght@300;400&display=swap');
+
+
 div {
   font-family: "Roboto"
 }
+
+* {
+  margin:0;
+  padding:0;
+}
+
+.CardContainer {
+  width: 371px;
+  height: 372px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.Lemon {
+  width: 371px;
+  height: 372px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+.Rocket{
+
+}
+.Title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  background-color: #8CFFBA;
+  height: 126px;
+}
+.lemon .SubContent{
+  
+}
+
+.SubContent {
+  width: 371px;
+  height: 246px;
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 46px;
+  background-color: #CFFFE2;
+}
+
+h1, p {
+  font-family: "Roboto";
+  font-size: 70px;
+}
+
+h2 {
+  font-family: "Lora";
+  font-size: 36px;
+  font-style: italic;
+  max-width: 311px;
+}
+
+button {
+  width: 311px;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 30px;
+  font-family: "Roboto";
+}
+
